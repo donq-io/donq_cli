@@ -1,6 +1,6 @@
 {
   "name": "donq",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "DonQ cli",
   "keywords": [
     "oclif"
@@ -13,7 +13,7 @@
   "exports": "./lib/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "donq": "./bin/ru.js"
+    "donq": "./bin/run.js"
   },
   "files": [
     "/bin",
@@ -28,9 +28,7 @@
     "prepare": "pnpm run build",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "posttest": "pnpm run lint",
-    "version": "oclif readme && git add README.md",
-    "plop": "plop",
-    "handlebars": "handlebars"
+    "version": "oclif readme && git add README.md"
   },
   "oclif": {
     "bin": "donq",

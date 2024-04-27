@@ -17,7 +17,7 @@ $ npm install -g donq
 $ donq COMMAND
 running command...
 $ donq (--version)
-donq/0.0.0 darwin-arm64 node-v20.11.1
+donq/0.0.1 darwin-arm64 node-v20.11.1
 $ donq --help [COMMAND]
 USAGE
   $ donq COMMAND
@@ -26,28 +26,28 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`donq aws ecs exec`](#donq-aws-ecs-exec)
-* [`donq create package frontend PACKAGENAME`](#donq-create-package-frontend-packagename)
-* [`donq create project CLIENTNAME PROJECTNAME`](#donq-create-project-clientname-projectname)
+* [`donq aws:ecs:exec`](#donq-awsecsexec)
+* [`donq create:package:frontend PACKAGENAME`](#donq-createpackagefrontend-packagename)
+* [`donq create:project CLIENTNAME PROJECTNAME`](#donq-createproject-clientname-projectname)
 * [`donq help [COMMAND]`](#donq-help-command)
 * [`donq plugins`](#donq-plugins)
-* [`donq plugins add PLUGIN`](#donq-plugins-add-plugin)
+* [`donq plugins:add PLUGIN`](#donq-pluginsadd-plugin)
 * [`donq plugins:inspect PLUGIN...`](#donq-pluginsinspect-plugin)
-* [`donq plugins install PLUGIN`](#donq-plugins-install-plugin)
-* [`donq plugins link PATH`](#donq-plugins-link-path)
-* [`donq plugins remove [PLUGIN]`](#donq-plugins-remove-plugin)
-* [`donq plugins reset`](#donq-plugins-reset)
-* [`donq plugins uninstall [PLUGIN]`](#donq-plugins-uninstall-plugin)
-* [`donq plugins unlink [PLUGIN]`](#donq-plugins-unlink-plugin)
-* [`donq plugins update`](#donq-plugins-update)
+* [`donq plugins:install PLUGIN`](#donq-pluginsinstall-plugin)
+* [`donq plugins:link PATH`](#donq-pluginslink-path)
+* [`donq plugins:remove [PLUGIN]`](#donq-pluginsremove-plugin)
+* [`donq plugins:reset`](#donq-pluginsreset)
+* [`donq plugins:uninstall [PLUGIN]`](#donq-pluginsuninstall-plugin)
+* [`donq plugins:unlink [PLUGIN]`](#donq-pluginsunlink-plugin)
+* [`donq plugins:update`](#donq-pluginsupdate)
 
-## `donq aws ecs exec`
+## `donq aws:ecs:exec`
 
 Create a project structure
 
 ```
 USAGE
-  $ donq aws ecs exec [-c <value>]
+  $ donq aws:ecs:exec [-c <value>]
 
 FLAGS
   -c, --command=<value>  [default: /bin/sh] Command to execute
@@ -56,15 +56,15 @@ DESCRIPTION
   Create a project structure
 ```
 
-_See code: [src/commands/aws/ecs/exec/index.ts](https://github.com/npm-package/donq/blob/v0.0.0/src/commands/aws/ecs/exec/index.ts)_
+_See code: [src/commands/aws/ecs/exec/index.ts](https://github.com/npm-package/donq/blob/v0.0.1/src/commands/aws/ecs/exec/index.ts)_
 
-## `donq create package frontend PACKAGENAME`
+## `donq create:package:frontend PACKAGENAME`
 
 Create a frontend package
 
 ```
 USAGE
-  $ donq create package frontend PACKAGENAME
+  $ donq create:package:frontend PACKAGENAME
 
 ARGUMENTS
   PACKAGENAME  The name of the package to create
@@ -73,15 +73,15 @@ DESCRIPTION
   Create a frontend package
 ```
 
-_See code: [src/commands/create/package/frontend/index.ts](https://github.com/npm-package/donq/blob/v0.0.0/src/commands/create/package/frontend/index.ts)_
+_See code: [src/commands/create/package/frontend/index.ts](https://github.com/npm-package/donq/blob/v0.0.1/src/commands/create/package/frontend/index.ts)_
 
-## `donq create project CLIENTNAME PROJECTNAME`
+## `donq create:project CLIENTNAME PROJECTNAME`
 
 Create a project structure
 
 ```
 USAGE
-  $ donq create project CLIENTNAME PROJECTNAME
+  $ donq create:project CLIENTNAME PROJECTNAME
 
 ARGUMENTS
   CLIENTNAME   The name of the client of the project to create
@@ -91,7 +91,7 @@ DESCRIPTION
   Create a project structure
 ```
 
-_See code: [src/commands/create/project/index.ts](https://github.com/npm-package/donq/blob/v0.0.0/src/commands/create/project/index.ts)_
+_See code: [src/commands/create/project/index.ts](https://github.com/npm-package/donq/blob/v0.0.1/src/commands/create/project/index.ts)_
 
 ## `donq help [COMMAND]`
 
@@ -136,13 +136,13 @@ EXAMPLES
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.0.14/src/commands/plugins/index.ts)_
 
-## `donq plugins add PLUGIN`
+## `donq plugins:add PLUGIN`
 
 Installs a plugin into donq.
 
 ```
 USAGE
-  $ donq plugins add PLUGIN... [--json] [-f] [-h] [-s | -v]
+  $ donq plugins:add PLUGIN... [--json] [-f] [-h] [-s | -v]
 
 ARGUMENTS
   PLUGIN...  Plugin to install.
@@ -167,20 +167,20 @@ DESCRIPTION
   Use the DONQ_NPM_REGISTRY environment variable to set the npm registry.
 
 ALIASES
-  $ donq plugins add
+  $ donq plugins:add
 
 EXAMPLES
   Install a plugin from npm registry.
 
-    $ donq plugins add myplugin
+    $ donq plugins:add myplugin
 
   Install a plugin from a github url.
 
-    $ donq plugins add https://github.com/someuser/someplugin
+    $ donq plugins:add https://github.com/someuser/someplugin
 
   Install a plugin from a github slug.
 
-    $ donq plugins add someuser/someplugin
+    $ donq plugins:add someuser/someplugin
 ```
 
 ## `donq plugins:inspect PLUGIN...`
@@ -189,7 +189,7 @@ Displays installation properties of a plugin.
 
 ```
 USAGE
-  $ donq plugins inspect PLUGIN...
+  $ donq plugins:inspect PLUGIN...
 
 ARGUMENTS
   PLUGIN...  [default: .] Plugin to inspect.
@@ -205,18 +205,18 @@ DESCRIPTION
   Displays installation properties of a plugin.
 
 EXAMPLES
-  $ donq plugins inspect myplugin
+  $ donq plugins:inspect myplugin
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.0.14/src/commands/plugins/inspect.ts)_
 
-## `donq plugins install PLUGIN`
+## `donq plugins:install PLUGIN`
 
 Installs a plugin into donq.
 
 ```
 USAGE
-  $ donq plugins install PLUGIN... [--json] [-f] [-h] [-s | -v]
+  $ donq plugins:install PLUGIN... [--json] [-f] [-h] [-s | -v]
 
 ARGUMENTS
   PLUGIN...  Plugin to install.
@@ -241,31 +241,31 @@ DESCRIPTION
   Use the DONQ_NPM_REGISTRY environment variable to set the npm registry.
 
 ALIASES
-  $ donq plugins add
+  $ donq plugins:add
 
 EXAMPLES
   Install a plugin from npm registry.
 
-    $ donq plugins install myplugin
+    $ donq plugins:install myplugin
 
   Install a plugin from a github url.
 
-    $ donq plugins install https://github.com/someuser/someplugin
+    $ donq plugins:install https://github.com/someuser/someplugin
 
   Install a plugin from a github slug.
 
-    $ donq plugins install someuser/someplugin
+    $ donq plugins:install someuser/someplugin
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.0.14/src/commands/plugins/install.ts)_
 
-## `donq plugins link PATH`
+## `donq plugins:link PATH`
 
 Links a plugin into the CLI for development.
 
 ```
 USAGE
-  $ donq plugins link PATH [-h] [--install] [-v]
+  $ donq plugins:link PATH [-h] [--install] [-v]
 
 ARGUMENTS
   PATH  [default: .] path to plugin
@@ -284,18 +284,18 @@ DESCRIPTION
 
 
 EXAMPLES
-  $ donq plugins link myplugin
+  $ donq plugins:link myplugin
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.0.14/src/commands/plugins/link.ts)_
 
-## `donq plugins remove [PLUGIN]`
+## `donq plugins:remove [PLUGIN]`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ donq plugins remove [PLUGIN...] [-h] [-v]
+  $ donq plugins:remove [PLUGIN...] [-h] [-v]
 
 ARGUMENTS
   PLUGIN...  plugin to uninstall
@@ -308,20 +308,20 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ donq plugins unlink
-  $ donq plugins remove
+  $ donq plugins:unlink
+  $ donq plugins:remove
 
 EXAMPLES
-  $ donq plugins remove myplugin
+  $ donq plugins:remove myplugin
 ```
 
-## `donq plugins reset`
+## `donq plugins:reset`
 
 Remove all user-installed and linked plugins.
 
 ```
 USAGE
-  $ donq plugins reset [--hard] [--reinstall]
+  $ donq plugins:reset [--hard] [--reinstall]
 
 FLAGS
   --hard       Delete node_modules and package manager related files in addition to uninstalling plugins.
@@ -330,13 +330,13 @@ FLAGS
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.0.14/src/commands/plugins/reset.ts)_
 
-## `donq plugins uninstall [PLUGIN]`
+## `donq plugins:uninstall [PLUGIN]`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ donq plugins uninstall [PLUGIN...] [-h] [-v]
+  $ donq plugins:uninstall [PLUGIN...] [-h] [-v]
 
 ARGUMENTS
   PLUGIN...  plugin to uninstall
@@ -349,22 +349,22 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ donq plugins unlink
-  $ donq plugins remove
+  $ donq plugins:unlink
+  $ donq plugins:remove
 
 EXAMPLES
-  $ donq plugins uninstall myplugin
+  $ donq plugins:uninstall myplugin
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.0.14/src/commands/plugins/uninstall.ts)_
 
-## `donq plugins unlink [PLUGIN]`
+## `donq plugins:unlink [PLUGIN]`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ donq plugins unlink [PLUGIN...] [-h] [-v]
+  $ donq plugins:unlink [PLUGIN...] [-h] [-v]
 
 ARGUMENTS
   PLUGIN...  plugin to uninstall
@@ -377,20 +377,20 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ donq plugins unlink
-  $ donq plugins remove
+  $ donq plugins:unlink
+  $ donq plugins:remove
 
 EXAMPLES
-  $ donq plugins unlink myplugin
+  $ donq plugins:unlink myplugin
 ```
 
-## `donq plugins update`
+## `donq plugins:update`
 
 Update installed plugins.
 
 ```
 USAGE
-  $ donq plugins update [-h] [-v]
+  $ donq plugins:update [-h] [-v]
 
 FLAGS
   -h, --help     Show CLI help.
