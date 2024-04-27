@@ -26,8 +26,9 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`donq hello PERSON`](#donq-hello-person)
-* [`donq hello world`](#donq-hello-world)
+* [`donq aws ecs exec`](#donq-aws-ecs-exec)
+* [`donq create package frontend PACKAGENAME`](#donq-create-package-frontend-packagename)
+* [`donq create project CLIENTNAME PROJECTNAME`](#donq-create-project-clientname-projectname)
 * [`donq help [COMMAND]`](#donq-help-command)
 * [`donq plugins`](#donq-plugins)
 * [`donq plugins add PLUGIN`](#donq-plugins-add-plugin)
@@ -40,47 +41,57 @@ USAGE
 * [`donq plugins unlink [PLUGIN]`](#donq-plugins-unlink-plugin)
 * [`donq plugins update`](#donq-plugins-update)
 
-## `donq hello PERSON`
+## `donq aws ecs exec`
 
-Say hello
+Create a project structure
 
 ```
 USAGE
-  $ donq hello PERSON -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
+  $ donq aws ecs exec [-c <value>]
 
 FLAGS
-  -f, --from=<value>  (required) Who is saying hello
+  -c, --command=<value>  [default: /bin/sh] Command to execute
 
 DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
+  Create a project structure
 ```
 
-_See code: [src/commands/hello/index.ts](https://github.com/npm-package/donq/blob/v0.0.0/src/commands/hello/index.ts)_
+_See code: [src/commands/aws/ecs/exec/index.ts](https://github.com/npm-package/donq/blob/v0.0.0/src/commands/aws/ecs/exec/index.ts)_
 
-## `donq hello world`
+## `donq create package frontend PACKAGENAME`
 
-Say hello world
+Create a frontend package
 
 ```
 USAGE
-  $ donq hello world
+  $ donq create package frontend PACKAGENAME
+
+ARGUMENTS
+  PACKAGENAME  The name of the package to create
 
 DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ donq hello world
-  hello world! (./src/commands/hello/world.ts)
+  Create a frontend package
 ```
 
-_See code: [src/commands/hello/world.ts](https://github.com/npm-package/donq/blob/v0.0.0/src/commands/hello/world.ts)_
+_See code: [src/commands/create/package/frontend/index.ts](https://github.com/npm-package/donq/blob/v0.0.0/src/commands/create/package/frontend/index.ts)_
+
+## `donq create project CLIENTNAME PROJECTNAME`
+
+Create a project structure
+
+```
+USAGE
+  $ donq create project CLIENTNAME PROJECTNAME
+
+ARGUMENTS
+  CLIENTNAME   The name of the client of the project to create
+  PROJECTNAME  The name of the project to create
+
+DESCRIPTION
+  Create a project structure
+```
+
+_See code: [src/commands/create/project/index.ts](https://github.com/npm-package/donq/blob/v0.0.0/src/commands/create/project/index.ts)_
 
 ## `donq help [COMMAND]`
 
