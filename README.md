@@ -17,7 +17,7 @@ $ npm install -g donq
 $ donq COMMAND
 running command...
 $ donq (--version)
-donq/0.0.3 darwin-arm64 node-v20.11.1
+donq/0.0.4 darwin-arm64 node-v20.11.1
 $ donq --help [COMMAND]
 USAGE
   $ donq COMMAND
@@ -27,9 +27,8 @@ USAGE
 # Commands
 <!-- commands -->
 * [`donq aws:ecs:exec`](#donq-awsecsexec)
-* [`donq create:package:frontend PACKAGENAME`](#donq-createpackagefrontend-packagename)
-* [`donq create:project CLIENTNAME PROJECTNAME`](#donq-createproject-clientname-projectname)
 * [`donq help [COMMAND]`](#donq-help-command)
+* [`donq package:frontend:create PACKAGENAME`](#donq-packagefrontendcreate-packagename)
 * [`donq plugins`](#donq-plugins)
 * [`donq plugins:add PLUGIN`](#donq-pluginsadd-plugin)
 * [`donq plugins:inspect PLUGIN...`](#donq-pluginsinspect-plugin)
@@ -40,6 +39,7 @@ USAGE
 * [`donq plugins:uninstall [PLUGIN]`](#donq-pluginsuninstall-plugin)
 * [`donq plugins:unlink [PLUGIN]`](#donq-pluginsunlink-plugin)
 * [`donq plugins:update`](#donq-pluginsupdate)
+* [`donq project:create CLIENTNAME PROJECTNAME`](#donq-projectcreate-clientname-projectname)
 
 ## `donq aws:ecs:exec`
 
@@ -56,42 +56,7 @@ DESCRIPTION
   Exec command inside ECS container
 ```
 
-_See code: [src/commands/aws/ecs/exec/index.ts](https://github.com/npm-package/donq/blob/v0.0.3/src/commands/aws/ecs/exec/index.ts)_
-
-## `donq create:package:frontend PACKAGENAME`
-
-Create a frontend package
-
-```
-USAGE
-  $ donq create:package:frontend PACKAGENAME
-
-ARGUMENTS
-  PACKAGENAME  The name of the package to create
-
-DESCRIPTION
-  Create a frontend package
-```
-
-_See code: [src/commands/create/package/frontend/index.ts](https://github.com/npm-package/donq/blob/v0.0.3/src/commands/create/package/frontend/index.ts)_
-
-## `donq create:project CLIENTNAME PROJECTNAME`
-
-Create a project structure
-
-```
-USAGE
-  $ donq create:project CLIENTNAME PROJECTNAME
-
-ARGUMENTS
-  CLIENTNAME   The name of the client of the project to create
-  PROJECTNAME  The name of the project to create
-
-DESCRIPTION
-  Create a project structure
-```
-
-_See code: [src/commands/create/project/index.ts](https://github.com/npm-package/donq/blob/v0.0.3/src/commands/create/project/index.ts)_
+_See code: [src/commands/aws/ecs/exec/index.ts](https://github.com/npm-package/donq/blob/v0.0.4/src/commands/aws/ecs/exec/index.ts)_
 
 ## `donq help [COMMAND]`
 
@@ -112,6 +77,23 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.0.21/src/commands/help.ts)_
+
+## `donq package:frontend:create PACKAGENAME`
+
+Create a frontend package
+
+```
+USAGE
+  $ donq package:frontend:create PACKAGENAME
+
+ARGUMENTS
+  PACKAGENAME  The name of the package to create
+
+DESCRIPTION
+  Create a frontend package
+```
+
+_See code: [src/commands/package/frontend/create.ts](https://github.com/npm-package/donq/blob/v0.0.4/src/commands/package/frontend/create.ts)_
 
 ## `donq plugins`
 
@@ -401,4 +383,22 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.0.14/src/commands/plugins/update.ts)_
+
+## `donq project:create CLIENTNAME PROJECTNAME`
+
+Create a project structure
+
+```
+USAGE
+  $ donq project:create CLIENTNAME PROJECTNAME
+
+ARGUMENTS
+  CLIENTNAME   The name of the client of the project to create
+  PROJECTNAME  The name of the project to create
+
+DESCRIPTION
+  Create a project structure
+```
+
+_See code: [src/commands/project/create.ts](https://github.com/npm-package/donq/blob/v0.0.4/src/commands/project/create.ts)_
 <!-- commandsstop -->

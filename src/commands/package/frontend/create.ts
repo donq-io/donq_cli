@@ -2,7 +2,8 @@ import {Args, Command} from '@oclif/core'
 import {execSync} from 'node:child_process'
 import {existsSync, mkdirSync} from 'node:fs'
 
-import {PACKAGES_FOLDER} from '../../../../config.js'
+import { PACKAGES_FOLDER } from '../../../config.js'
+
 
 export default class Frontend extends Command {
   static args = {

@@ -4,8 +4,9 @@ import {existsSync, mkdirSync, readFileSync, writeFileSync} from 'node:fs'
 import {dirname} from 'node:path'
 import {fileURLToPath} from 'node:url'
 
-import {PACKAGES_FOLDER} from '../../../config.js'
-import {kebabCase} from '../../../lib/utils.js'
+import { PACKAGES_FOLDER } from '../../config.js'
+import { kebabCase } from '../../lib/utils.js'
+
 
 export default class Project extends Command {
   static args = {

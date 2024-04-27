@@ -1,6 +1,6 @@
 {
   "name": "donq",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "DonQ cli",
   "keywords": [
     "oclif"
@@ -37,7 +37,12 @@
     "plugins": [
       "@oclif/plugin-help",
       "@oclif/plugin-plugins"
-    ]
+    ],
+    "topics": {
+      "aws": { "description": "AWS commands" },
+      "package": { "description": "Manage packages" },
+      "project": { "description": "Manage project" }
+    }
   },
   "dependencies": {
     "@aws-sdk/client-ecs": "^3.563.0",
