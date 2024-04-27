@@ -17,7 +17,7 @@ $ npm install -g donq
 $ donq COMMAND
 running command...
 $ donq (--version)
-donq/0.0.4 darwin-arm64 node-v20.11.1
+donq/0.0.6 darwin-arm64 node-v20.11.1
 $ donq --help [COMMAND]
 USAGE
   $ donq COMMAND
@@ -56,7 +56,7 @@ DESCRIPTION
   Exec command inside ECS container
 ```
 
-_See code: [src/commands/aws/ecs/exec/index.ts](https://github.com/npm-package/donq/blob/v0.0.4/src/commands/aws/ecs/exec/index.ts)_
+_See code: [src/commands/aws/ecs/exec/index.ts](https://github.com/npm-package/donq/blob/v0.0.6/src/commands/aws/ecs/exec/index.ts)_
 
 ## `donq help [COMMAND]`
 
@@ -93,7 +93,7 @@ DESCRIPTION
   Create a frontend package
 ```
 
-_See code: [src/commands/package/frontend/create.ts](https://github.com/npm-package/donq/blob/v0.0.4/src/commands/package/frontend/create.ts)_
+_See code: [src/commands/package/frontend/create.ts](https://github.com/npm-package/donq/blob/v0.0.6/src/commands/package/frontend/create.ts)_
 
 ## `donq plugins`
 
@@ -400,5 +400,5 @@ DESCRIPTION
   Create a project structure
 ```
 
-_See code: [src/commands/project/create.ts](https://github.com/npm-package/donq/blob/v0.0.4/src/commands/project/create.ts)_
+_See code: [src/commands/project/create.ts](https://github.com/npm-package/donq/blob/v0.0.6/src/commands/project/create.ts)_
 <!-- commandsstop -->

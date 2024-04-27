@@ -1,6 +1,6 @@
 {
   "name": "donq",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "DonQ cli",
   "keywords": [
     "oclif"
@@ -18,7 +18,8 @@
   "files": [
     "/bin",
     "/dist",
-    "/oclif.manifest.json"
+    "/oclif.manifest.json",
+    "/templates"
   ],
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
@@ -39,9 +40,15 @@
       "@oclif/plugin-plugins"
     ],
     "topics": {
-      "aws": { "description": "AWS commands" },
-      "package": { "description": "Manage packages" },
-      "project": { "description": "Manage project" }
+      "aws": {
+        "description": "AWS commands"
+      },
+      "package": {
+        "description": "Manage packages"
+      },
+      "project": {
+        "description": "Manage project"
+      }
     }
   },
   "dependencies": {
@@ -51,14 +58,13 @@
     "@oclif/plugin-help": "^6",
     "@oclif/plugin-plugins": "^5",
     "handlebars": "^4.7.8",
-    "inquirer": "^9.2.19",
-    "plop": "^4.0.1"
+    "inquirer": "^9.2.19"
   },
   "devDependencies": {
     "@oclif/prettier-config": "^0.2.1",
     "@oclif/test": "^3",
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/chai": "^4",
+    "@types/inquirer": "^9.0.7",
     "@types/mocha": "^10",
     "@types/node": "^18",
     "chai": "^4",

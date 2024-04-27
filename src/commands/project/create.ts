@@ -4,9 +4,8 @@ import {existsSync, mkdirSync, readFileSync, writeFileSync} from 'node:fs'
 import {dirname} from 'node:path'
 import {fileURLToPath} from 'node:url'
 
-import { PACKAGES_FOLDER } from '../../config.js'
-import { kebabCase } from '../../lib/utils.js'
-
+import {PACKAGES_FOLDER} from '../../config.js'
+import {kebabCase} from '../../lib/utils.js'
 
 export default class Project extends Command {
   static args = {
@@ -37,7 +36,7 @@ export default class Project extends Command {
     }
 
     for (const filename of filesToProcess) {
-      const hbsData = readFileSync(`${currentPath}/templates/${filename}`).toString()
+      const hbsData = readFileSync(`${currentPath}/../../../templates/project/${filename}`).toString()
       const template = Handlebars.compile(hbsData)
       const fileData = template({
         packagesFolder: PACKAGES_FOLDER,
