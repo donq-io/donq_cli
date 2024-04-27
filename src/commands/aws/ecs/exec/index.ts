@@ -1,10 +1,10 @@
 import {DescribeTasksCommand, ECSClient, ListClustersCommand, ListTasksCommand} from '@aws-sdk/client-ecs'
 import {fromIni} from '@aws-sdk/credential-providers'
-import {Command, Flags} from '@oclif/core'
+import {Command as BaseCommand, Flags} from '@oclif/core'
 import inquirer from 'inquirer'
 import {execSync} from 'node:child_process'
 
-export default class Project extends Command {
+export default class Command extends BaseCommand {
   static args = {}
 
   static description = 'Exec command inside ECS container'
@@ -21,7 +21,7 @@ export default class Project extends Command {
   }
 
   async run(): Promise<void> {
-    const {flags} = await this.parse(Project)
+    const {flags} = await this.parse(Command)
     const {command} = flags
 
     const profileQuestion = await inquirer.prompt({

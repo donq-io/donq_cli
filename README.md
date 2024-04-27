@@ -17,7 +17,7 @@ $ npm install -g donq
 $ donq COMMAND
 running command...
 $ donq (--version)
-donq/0.0.6 darwin-arm64 node-v20.11.1
+donq/0.0.7 darwin-arm64 node-v20.11.1
 $ donq --help [COMMAND]
 USAGE
   $ donq COMMAND
@@ -28,6 +28,7 @@ USAGE
 <!-- commands -->
 * [`donq aws:ecs:exec`](#donq-awsecsexec)
 * [`donq help [COMMAND]`](#donq-help-command)
+* [`donq package:backend:create PACKAGENAME`](#donq-packagebackendcreate-packagename)
 * [`donq package:frontend:create PACKAGENAME`](#donq-packagefrontendcreate-packagename)
 * [`donq plugins`](#donq-plugins)
 * [`donq plugins:add PLUGIN`](#donq-pluginsadd-plugin)
@@ -56,7 +57,7 @@ DESCRIPTION
   Exec command inside ECS container
 ```
 
-_See code: [src/commands/aws/ecs/exec/index.ts](https://github.com/npm-package/donq/blob/v0.0.6/src/commands/aws/ecs/exec/index.ts)_
+_See code: [src/commands/aws/ecs/exec/index.ts](https://github.com/npm-package/donq/blob/v0.0.7/src/commands/aws/ecs/exec/index.ts)_
 
 ## `donq help [COMMAND]`
 
@@ -78,6 +79,23 @@ DESCRIPTION
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.0.21/src/commands/help.ts)_
 
+## `donq package:backend:create PACKAGENAME`
+
+Create a backend package
+
+```
+USAGE
+  $ donq package:backend:create PACKAGENAME
+
+ARGUMENTS
+  PACKAGENAME  The name of the package to create
+
+DESCRIPTION
+  Create a backend package
+```
+
+_See code: [src/commands/package/backend/create.ts](https://github.com/npm-package/donq/blob/v0.0.7/src/commands/package/backend/create.ts)_
+
 ## `donq package:frontend:create PACKAGENAME`
 
 Create a frontend package
@@ -93,7 +111,7 @@ DESCRIPTION
   Create a frontend package
 ```
 
-_See code: [src/commands/package/frontend/create.ts](https://github.com/npm-package/donq/blob/v0.0.6/src/commands/package/frontend/create.ts)_
+_See code: [src/commands/package/frontend/create.ts](https://github.com/npm-package/donq/blob/v0.0.7/src/commands/package/frontend/create.ts)_
 
 ## `donq plugins`
 
@@ -400,5 +418,5 @@ DESCRIPTION
   Create a project structure
 ```
 
-_See code: [src/commands/project/create.ts](https://github.com/npm-package/donq/blob/v0.0.6/src/commands/project/create.ts)_
+_See code: [src/commands/project/create.ts](https://github.com/npm-package/donq/blob/v0.0.7/src/commands/project/create.ts)_
 <!-- commandsstop -->

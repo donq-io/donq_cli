@@ -1,4 +1,4 @@
-import {Args, Command} from '@oclif/core'
+import {Args, Command as BaseCommand} from '@oclif/core'
 import Handlebars from 'handlebars'
 import {existsSync, mkdirSync, readFileSync, writeFileSync} from 'node:fs'
 import {dirname} from 'node:path'
@@ -7,7 +7,7 @@ import {fileURLToPath} from 'node:url'
 import {PACKAGES_FOLDER} from '../../config.js'
 import {kebabCase} from '../../lib/utils.js'
 
-export default class Project extends Command {
+export default class Command extends BaseCommand {
   static args = {
     clientName: Args.string({
       description: 'The name of the client of the project to create',
@@ -26,7 +26,7 @@ export default class Project extends Command {
   static flags = {}
 
   async run(): Promise<void> {
-    const {args} = await this.parse(Project)
+    const {args} = await this.parse(Command)
     const folder = `${kebabCase(args.clientName)}_${kebabCase(args.projectName)}`
     const currentPath = dirname(fileURLToPath(import.meta.url))
     const filesToProcess = ['pnpm-workspace.yaml.hbs', 'package.json.hbs', '.npmrc.hbs']

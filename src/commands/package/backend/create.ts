@@ -9,7 +9,7 @@ export default class Command extends BaseCommand {
     packageName: Args.string({description: 'The name of the package to create', required: true}),
   }
 
-  static description = 'Create a frontend package'
+  static description = 'Create a backend package'
 
   static examples = []
 
@@ -22,11 +22,8 @@ export default class Command extends BaseCommand {
       mkdirSync(PACKAGES_FOLDER, {recursive: true})
     }
 
-    execSync(
-      `npx -y create-next-app@latest ${PACKAGES_FOLDER}/${args.packageName} --ts --tailwind --eslint --app --src-dir --no-import-alias --use-pnpm`,
-      {
-        stdio: 'inherit',
-      },
-    )
+    execSync(`npx -y create-keystone-app@latest ${PACKAGES_FOLDER}/${args.packageName}`, {
+      stdio: 'inherit',
+    })
   }
 }
