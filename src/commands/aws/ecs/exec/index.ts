@@ -7,7 +7,7 @@ import {execSync} from 'node:child_process'
 export default class Project extends Command {
   static args = {}
 
-  static description = 'Create a project structure'
+  static description = 'Exec command inside ECS container'
 
   static examples = []
 
