@@ -17,7 +17,7 @@ $ npm install -g donq
 $ donq COMMAND
 running command...
 $ donq (--version)
-donq/0.0.2 darwin-arm64 node-v20.11.1
+donq/0.0.3 darwin-arm64 node-v20.11.1
 $ donq --help [COMMAND]
 USAGE
   $ donq COMMAND
@@ -43,7 +43,7 @@ USAGE
 
 ## `donq aws:ecs:exec`
 
-Create a project structure
+Exec command inside ECS container
 
 ```
 USAGE
@@ -53,10 +53,10 @@ FLAGS
   -c, --command=<value>  [default: /bin/sh] Command to execute
 
 DESCRIPTION
-  Create a project structure
+  Exec command inside ECS container
 ```
 
-_See code: [src/commands/aws/ecs/exec/index.ts](https://github.com/npm-package/donq/blob/v0.0.2/src/commands/aws/ecs/exec/index.ts)_
+_See code: [src/commands/aws/ecs/exec/index.ts](https://github.com/npm-package/donq/blob/v0.0.3/src/commands/aws/ecs/exec/index.ts)_
 
 ## `donq create:package:frontend PACKAGENAME`
 
@@ -73,7 +73,7 @@ DESCRIPTION
   Create a frontend package
 ```
 
-_See code: [src/commands/create/package/frontend/index.ts](https://github.com/npm-package/donq/blob/v0.0.2/src/commands/create/package/frontend/index.ts)_
+_See code: [src/commands/create/package/frontend/index.ts](https://github.com/npm-package/donq/blob/v0.0.3/src/commands/create/package/frontend/index.ts)_
 
 ## `donq create:project CLIENTNAME PROJECTNAME`
 
@@ -91,7 +91,7 @@ DESCRIPTION
   Create a project structure
 ```
 
-_See code: [src/commands/create/project/index.ts](https://github.com/npm-package/donq/blob/v0.0.2/src/commands/create/project/index.ts)_
+_See code: [src/commands/create/project/index.ts](https://github.com/npm-package/donq/blob/v0.0.3/src/commands/create/project/index.ts)_
 
 ## `donq help [COMMAND]`
 
