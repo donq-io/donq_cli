@@ -34,7 +34,7 @@ export default class Command extends BaseCommand {
 
     const regionQuestion = await inquirer.prompt({
       default: 'eu-south-1',
-      message: 'AWS profile',
+      message: 'AWS region',
       name: 'region',
       type: 'input',
     })
