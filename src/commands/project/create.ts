@@ -36,13 +36,13 @@ export default class Command extends BaseCommand {
     }
 
     for (const filename of filesToProcess) {
-      const hbsData = readFileSync(`${currentPath}/../../../templates/project/${filename}`).toString()
+      const hbsData = readFileSync(`${currentPath}/../../../assets/templates/project/${filename}`).toString()
       const template = Handlebars.compile(hbsData)
       const fileData = template({
         packagesFolder: PACKAGES_FOLDER,
         projectName: `${kebabCase(args.clientName)}_${kebabCase(args.projectName)}`,
       })
-      writeFileSync(`${folder}/${filename}`, fileData)
+      writeFileSync(`${folder}/${filename.replace('.hbs', '')}`, fileData)
     }
   }
 }
